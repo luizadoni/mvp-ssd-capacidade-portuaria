@@ -3,17 +3,19 @@
   "portal": "https://www.gov.br/antaq/pt-br/assuntos/estatistica",
   "painel": "http://ea.antaq.gov.br",
   "ano_referencia": 2025,
-  "coletado_em": "2026-11-16T12:05:36+00:00",
+  "coletado_em": "2026-11-16T14:29:00-03:00",
   "licenca": "Dado publico. A ANTAQ disponibiliza a base para uso livre, com exigencia de citacao da fonte. Nao contem dados pessoais: o registro e por atracacao de embarcacao, nao por individuo.",
   "arquivos": [
     {
       "arquivo": "2025Atracacao.txt",
-      "bytes": 40204959,
+      "bytes": 40321287,
       "linhas_de_dados": 116327,
       "colunas": 29,
       "separador": ";",
       "codificacao": "utf-8 com BOM",
-      "sha256": "55fdd4ba13f1f1f4710dd1b1e360d43c51a24574bc51e8c9a8b5d298e39919cd"
+      "sha256": "ebaf080a9be83061c15a937c5f88228437c9a645f4f4199da15de35a45b256ff",
+      "terminador_de_linha": "CRLF",
+      "origem": "download direto do Painel do Estatistico Aquaviario da ANTAQ"
     },
     {
       "arquivo": "2025Carga.txt",
@@ -22,7 +24,10 @@
       "colunas": 27,
       "separador": ";",
       "codificacao": "utf-8 com BOM",
-      "sha256": "2ca66ede48b4e7e7cc2acc66f0699a26511e868143f22ee54e145c67c9c9de6b"
+      "sha256": "2ca66ede48b4e7e7cc2acc66f0699a26511e868143f22ee54e145c67c9c9de6b",
+      "terminador_de_linha": "CRLF",
+      "origem": "download direto do Painel do Estatistico Aquaviario da ANTAQ"
     }
-  ]
+  ],
+  "nota_de_verificacao": "Os valores acima correspondem aos arquivos obtidos diretamente do painel da ANTAQ e carregados no Unity Catalog, e foram conferidos na propria plataforma de nuvem. Durante o desenvolvimento, o pipeline local processou uma copia do mesmo conjunto cujo 2025Carga.txt e byte a byte identico a este (mesmo sha256) e cujo 2025Atracacao.txt difere em exatamente 116.328 bytes, um por linha do arquivo, incluindo o cabecalho. A diferenca corresponde ao terminador de linha: CRLF no arquivo oficial contra LF na copia normalizada. O conteudo e identico, o que foi confirmado pela execucao em nuvem: 116.327 atracacoes, 2.467.854 itens de carga e o mesmo ranking de quinze instalacoes produzido pelo pipeline local."
 }

@@ -75,9 +75,11 @@ P5 não é formalidade. É pré-condição: nenhuma das outras quatro vale mais 
 
 `2025Carga.txt` traz 2.467.854 itens de carga em 27 colunas, uma linha por item, com peso bruto, TEU, natureza e sentido.
 
-**Volume total:** 494 MB em texto, separador `;`, codificação UTF-8 com BOM, decimal com vírgula.
+**Volume total:** 494 MB em texto, separador `;`, codificação UTF-8 com BOM, decimal com vírgula e terminador de linha CRLF.
 
 **Coleta:** `scripts/coleta.py`. A ANTAQ migrou o painel em 2026 e o endereço `web3.antaq.gov.br` saiu do ar, então o script tenta os endpoints conhecidos e, se nenhum responder, imprime o roteiro de download manual pelo painel em `gov.br/antaq/pt-br/assuntos/estatistica`, aba Base de Dados. Nos dois casos ele grava um **manifesto de coleta** com origem, data, número de linhas, número de colunas e hash SHA256 de cada arquivo. O manifesto está em [`evidencias/manifesto_coleta_2025.json`](evidencias/manifesto_coleta_2025.json) e permite a qualquer pessoa verificar que trabalhou sobre exatamente o mesmo arquivo.
+
+A conferência de integridade rendeu uma observação que vale registrar. Durante o desenvolvimento, o pipeline local processou uma cópia do mesmo conjunto. O arquivo de carga dessa cópia é byte a byte idêntico ao oficial, com o mesmo SHA-256. Já o arquivo de atracação difere em exatamente 116.328 bytes, que é o número de linhas do arquivo somado ao cabeçalho, ou seja, um byte por linha. A diferença corresponde ao terminador de linha, CRLF no arquivo oficial contra LF na cópia normalizada, e não ao conteúdo. A confirmação veio da execução em nuvem sobre o arquivo oficial, que produziu as mesmas 116.327 atracações, os mesmos 2.467.854 itens de carga e o mesmo ranking de quinze instalações obtido localmente. É um exemplo pequeno de por que verificar integridade por hash e por contagem, e não por tamanho de arquivo.
 
 ![Painel do Estatístico Aquaviário, aba Base de Dados, ano de 2025](evidencias/01_painel_antaq_download.png)
 
