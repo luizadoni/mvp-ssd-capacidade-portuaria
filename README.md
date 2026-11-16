@@ -148,7 +148,7 @@ Os arquivos brutos foram carregados em um Volume do Unity Catalog antes da execu
 
 A de nuvem, em PySpark, está em [`notebooks/01_pipeline_databricks.py`](notebooks/01_pipeline_databricks.py) e grava as seis tabelas como Delta no Unity Catalog do Databricks. O notebook termina com quatro verificações: um teste de integridade referencial que acusa qualquer linha da fato sem chave de dimensão, `SHOW TABLES`, `DESCRIBE DETAIL fato_atracacao` e uma consulta de equivalência cujos números devem bater com `outputs/relatorio_qualidade_2025.json`.
 
-![Execução do pipeline na nuvem, com as contagens das tabelas e o teste de integridade referencial](evidencias/04_notebook_executado.png)
+![Execução do pipeline na nuvem: leitura dos arquivos brutos e contagens da camada bronze](evidencias/04_notebook_executado.png)
 
 As tabelas resultantes ficam materializadas no catálogo, em formato Delta.
 
@@ -162,9 +162,9 @@ A equivalência entre as duas implementações foi verificada no resultado, e n�
 
 Vale registrar uma decisão técnica que custou uma reexecução. A primeira versão do notebook gerava as chaves sintéticas das dimensões com `monotonically_increasing_id()`. Essa função não é determinística: como o Spark avalia de forma preguiçosa e recalcula a coluna a cada ação, a chave gravada na dimensão não era a mesma gravada na tabela fato, e a junção deixava de casar. O sintoma foi discreto e perigoso, porque o pipeline terminava sem erro e apenas a consulta final devolvia um resultado empobrecido. A correção foi gerar a chave com `row_number()` sobre uma ordenação fixa, gravar as dimensões antes da fato e relê-las do Delta para montar a junção. O teste de integridade referencial foi acrescentado justamente para que uma falha desse tipo passe a ser detectada pelo próprio pipeline, e não pela inspeção do resultado.
 
-A captura decisiva, porém, é outra: o catálogo reaberto **depois de o compute ser desligado**, com as tabelas ainda consultáveis. É o que distingue persistência real de resultado que existia apenas na memória da sessão.
+A captura decisiva, porém, é outra: o catálogo reaberto **bem depois do fim da execução**, com as tabelas ainda presentes e consultáveis. As tabelas foram criadas às 11h54 e seguiam disponíveis às 13h54, duas horas mais tarde, fora de qualquer sessão de processamento ativa. É o que distingue persistência real de resultado que existia apenas na memória da sessão.
 
-![Tabelas ainda presentes no catálogo após o desligamento do compute](evidencias/07_catalog_apos_cluster_desligado.png)
+![Tabelas ainda presentes e consultáveis no catálogo, duas horas após o fim da execução](evidencias/07_catalog_apos_cluster_desligado.png)
 
 O conjunto completo das capturas está em `evidencias/`, e o que cada uma comprova está descrito em [`ROTEIRO_EVIDENCIAS.md`](evidencias/ROTEIRO_EVIDENCIAS.md).
 

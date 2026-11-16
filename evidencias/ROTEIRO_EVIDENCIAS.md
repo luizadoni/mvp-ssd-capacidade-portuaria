@@ -33,8 +33,8 @@ Saída de `DESCRIBE DETAIL fato_atracacao`, mostrando formato Delta, número de 
 Comprova: a tabela é um objeto Delta materializado, não uma view temporária de sessão.
 
 **`07_catalog_apos_cluster_desligado.png`**
-Aba Catalog reaberta depois de encerrar o cluster, com as tabelas ainda presentes e consultáveis.
-Comprova: a persistência sobrevive ao fim da sessão de computação. É o que distingue persistência real de resultado em memória.
+Aba Catalog reaberta bem depois do fim da execução, com as tabelas ainda presentes e consultáveis. Na captura entregue, as tabelas foram criadas às 11h54 e seguiam disponíveis às 13h54, com a data de criação de cada uma visível na listagem.
+Comprova: a persistência sobrevive ao fim da sessão de processamento. É o que distingue persistência real de resultado que existia apenas em memória.
 
 ## 3. Resultados das perguntas de negócio
 
