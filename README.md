@@ -79,6 +79,10 @@ P5 não é formalidade. É pré-condição: nenhuma das outras quatro vale mais 
 
 **Coleta:** `scripts/coleta.py`. A ANTAQ migrou o painel em 2026 e o endereço `web3.antaq.gov.br` saiu do ar, então o script tenta os endpoints conhecidos e, se nenhum responder, imprime o roteiro de download manual pelo painel em `gov.br/antaq/pt-br/assuntos/estatistica`, aba Base de Dados. Nos dois casos ele grava um **manifesto de coleta** com origem, data, número de linhas, número de colunas e hash SHA256 de cada arquivo. O manifesto está em [`evidencias/manifesto_coleta_2025.json`](evidencias/manifesto_coleta_2025.json) e permite a qualquer pessoa verificar que trabalhou sobre exatamente o mesmo arquivo.
 
+![Painel do Estatístico Aquaviário, aba Base de Dados, ano de 2025](evidencias/01_painel_antaq_download.png)
+
+![Arquivos brutos obtidos, com seus tamanhos](evidencias/02_arquivos_baixados.png)
+
 **Licença e ética:** dado público, uso livre com citação da fonte. A base **não contém dados pessoais** na acepção da LGPD, porque a unidade de registro é a atracação de uma embarcação, não uma pessoa. Nenhuma anonimização foi necessária. Os arquivos brutos não são versionados neste repositório, por tamanho, e sim reproduzidos pelo script de coleta. Detalhes em [`LICENSE`](LICENSE).
 
 ---
@@ -138,13 +142,31 @@ O pipeline existe em duas implementações funcionalmente equivalentes.
 
 A local, em pandas, está em `scripts/pipeline.py` e serve ao desenvolvimento e ao teste.
 
+Os arquivos brutos foram carregados em um Volume do Unity Catalog antes da execução.
+
+![Arquivos brutos no Volume do Unity Catalog](evidencias/03_volume_unity_catalog.png)
+
 A de nuvem, em PySpark, está em [`notebooks/01_pipeline_databricks.py`](notebooks/01_pipeline_databricks.py) e grava as seis tabelas como Delta no Unity Catalog do Databricks. O notebook termina com quatro verificações: um teste de integridade referencial que acusa qualquer linha da fato sem chave de dimensão, `SHOW TABLES`, `DESCRIBE DETAIL fato_atracacao` e uma consulta de equivalência cujos números devem bater com `outputs/relatorio_qualidade_2025.json`.
+
+![Execução do pipeline na nuvem, com as contagens das tabelas e o teste de integridade referencial](evidencias/04_notebook_executado.png)
+
+As tabelas resultantes ficam materializadas no catálogo, em formato Delta.
+
+![Tabelas do esquema estrela no Unity Catalog](evidencias/05_show_tables.png)
+
+![Detalhe da tabela fato, em formato Delta](evidencias/06_describe_detail.png)
 
 A equivalência entre as duas implementações foi verificada no resultado, e não apenas nas contagens: a consulta final do notebook, executada em SQL sobre as tabelas Delta, devolve as mesmas quinze instalações, na mesma ordem e com as mesmas contagens de atracação, que o pipeline local produz em `outputs/ranking_maritimo_2025.csv`. São dois caminhos independentes, em linguagens e motores diferentes, partindo dos mesmos arquivos brutos e chegando ao mesmo resultado linha a linha.
 
+![Contagens obtidas na nuvem, conferidas contra a execução local](evidencias/09_equivalencia_local_nuvem.png)
+
 Vale registrar uma decisão técnica que custou uma reexecução. A primeira versão do notebook gerava as chaves sintéticas das dimensões com `monotonically_increasing_id()`. Essa função não é determinística: como o Spark avalia de forma preguiçosa e recalcula a coluna a cada ação, a chave gravada na dimensão não era a mesma gravada na tabela fato, e a junção deixava de casar. O sintoma foi discreto e perigoso, porque o pipeline terminava sem erro e apenas a consulta final devolvia um resultado empobrecido. A correção foi gerar a chave com `row_number()` sobre uma ordenação fixa, gravar as dimensões antes da fato e relê-las do Delta para montar a junção. O teste de integridade referencial foi acrescentado justamente para que uma falha desse tipo passe a ser detectada pelo próprio pipeline, e não pela inspeção do resultado.
 
-As capturas que comprovam a persistência estão em `evidencias/`, seguindo o [`ROTEIRO_EVIDENCIAS.md`](evidencias/ROTEIRO_EVIDENCIAS.md). A captura decisiva é a de número 07: o catálogo reaberto **depois de o cluster ser desligado**, com as tabelas ainda consultáveis. É o que distingue persistência real de resultado em memória de sessão.
+A captura decisiva, porém, é outra: o catálogo reaberto **depois de o compute ser desligado**, com as tabelas ainda consultáveis. É o que distingue persistência real de resultado que existia apenas na memória da sessão.
+
+![Tabelas ainda presentes no catálogo após o desligamento do compute](evidencias/07_catalog_apos_cluster_desligado.png)
+
+O conjunto completo das capturas está em `evidencias/`, e o que cada uma comprova está descrito em [`ROTEIRO_EVIDENCIAS.md`](evidencias/ROTEIRO_EVIDENCIAS.md).
 
 ---
 
@@ -219,6 +241,10 @@ O ranking corrigido restringe o universo ao que de fato é capacidade de cais ma
 ![Ranking corrigido de capacidade recuperável](outputs/figuras/fig2_ranking_recuperavel.png)
 
 Adotando como alvo trazer cada instalação ao nível mediano do setor, 18,2% do tempo atracado, o potencial é de **46.095 horas de berço por ano, equivalentes a 5,26 posições de cais**, com 71,3% concentrados em dez terminais. O ranking completo está em [`outputs/ranking_maritimo_2025.csv`](outputs/ranking_maritimo_2025.csv).
+
+O mesmo ranking, reproduzido em SQL sobre as tabelas Delta da nuvem, ordenado pelo total absoluto de berço improdutivo:
+
+![Ranking de berço improdutivo calculado em SQL sobre as tabelas da nuvem](evidencias/08_sql_ranking.png)
 
 ### P3. Fila ou coordenação?
 

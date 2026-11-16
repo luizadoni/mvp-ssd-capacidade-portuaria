@@ -116,6 +116,22 @@ print(f"{'OK  ' if abs(rec - s['b_ranking_corrigido']['posicoes_de_cais_equivale
 razao = a["sintese_decisao"]["horas_recuperaveis_top10"] / s["b_ranking_corrigido"]["horas_recuperaveis_total"]
 print(f"{'OK  ' if razao > 4 else 'FALHA'}  erro da leitura ingenua: fator {razao:.2f}x")
 
+# Checagem das evidencias: toda imagem referenciada no README precisa existir,
+# senao o GitHub renderiza um quadro quebrado no lugar dela.
+print("\n--- evidencias referenciadas no README ---")
+import re
+refs = sorted(set(re.findall(r"evidencias/\d\d_[a-z_]+\.png", readme)))
+sem_arquivo = []
+for r in refs:
+    existe = (proj / r).exists()
+    print(f"{'OK  ' if existe else 'FALTA'}  {r}")
+    if not existe:
+        sem_arquivo.append(r)
+if sem_arquivo:
+    print(f"\n{len(sem_arquivo)} imagem(ns) referenciada(s) sem arquivo correspondente.")
+    print("Salve-as em evidencias/ com exatamente esses nomes antes de publicar o repositorio.")
+    falhas.extend(("evidencia ausente", "-", r) for r in sem_arquivo)
+
 print(f"\n{'TODAS AS CHECAGENS PASSARAM' if not falhas else f'{len(falhas)} FALHA(S)'}")
 for f in falhas:
     print("   ", f)
