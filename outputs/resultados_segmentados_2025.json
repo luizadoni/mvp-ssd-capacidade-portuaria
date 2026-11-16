@@ -1,0 +1,308 @@
+{
+  "ano": 2025,
+  "a_decomposicao_por_segmento": [
+    {
+      "segmento": "Maritimo de carga",
+      "atracacoes": 42780,
+      "peso_total_milhoes_t": 1282.44,
+      "navio_hora_total": 3997170.3,
+      "share_por_soma_pct": {
+        "t1_espera_atracacao": 54.02,
+        "t2_espera_inicio_op": 3.41,
+        "t3_operacao": 38.05,
+        "t4_espera_desatracacao": 4.51
+      },
+      "share_por_mediana_pct": {
+        "t1_espera_atracacao": 12.19,
+        "t2_espera_inicio_op": 4.78,
+        "t3_operacao": 74.12,
+        "t4_espera_desatracacao": 8.91
+      },
+      "estadia_mediana_h": 44.3,
+      "estadia_media_h": 93.44,
+      "estadia_p90_h": 250.42,
+      "berco_improdutivo_pct_atracado": 17.23
+    },
+    {
+      "segmento": "Interior (fluvial)",
+      "atracacoes": 52642,
+      "peso_total_milhoes_t": 87.07,
+      "navio_hora_total": 2005262.4,
+      "share_por_soma_pct": {
+        "t1_espera_atracacao": 55.67,
+        "t2_espera_inicio_op": 12.97,
+        "t3_operacao": 23.28,
+        "t4_espera_desatracacao": 8.08
+      },
+      "share_por_mediana_pct": {
+        "t1_espera_atracacao": 6.31,
+        "t2_espera_inicio_op": 4.5,
+        "t3_operacao": 78.83,
+        "t4_espera_desatracacao": 10.36
+      },
+      "estadia_mediana_h": 12.5,
+      "estadia_media_h": 38.09,
+      "estadia_p90_h": 99.38,
+      "berco_improdutivo_pct_atracado": 47.49
+    },
+    {
+      "segmento": "Apoio",
+      "atracacoes": 13084,
+      "peso_total_milhoes_t": 9.73,
+      "navio_hora_total": 572903.5,
+      "share_por_soma_pct": {
+        "t1_espera_atracacao": 54.04,
+        "t2_espera_inicio_op": 2.86,
+        "t3_operacao": 36.49,
+        "t4_espera_desatracacao": 6.62
+      },
+      "share_por_mediana_pct": {
+        "t1_espera_atracacao": 23.66,
+        "t2_espera_inicio_op": 4.3,
+        "t3_operacao": 69.89,
+        "t4_espera_desatracacao": 2.15
+      },
+      "estadia_mediana_h": 19.33,
+      "estadia_media_h": 43.79,
+      "estadia_p90_h": 101.95,
+      "berco_improdutivo_pct_atracado": 20.62
+    }
+  ],
+  "b_ranking_corrigido": {
+    "universo": "navegacao de longo curso e cabotagem, operacao de movimentacao de carga, instalacoes com 50+ atracacoes",
+    "instalacoes": 76,
+    "atracacoes": 30772,
+    "improdutivo_total_h": 280301.8,
+    "pct_improdutivo_mediano_setor": 18.23,
+    "horas_recuperaveis_total": 46095.0,
+    "posicoes_de_cais_equivalentes_recuperaveis": 5.26,
+    "pct_recuperavel_no_top10": 71.3,
+    "top15": [
+      {
+        "porto_atracacao": "Terminal Graneleiro Hermasa",
+        "complexo_portuario": "Manaus",
+        "sguf": "AM",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 147,
+        "improdutivo_h": 16975.27,
+        "improdutivo_mediano_h": 86.77,
+        "pct_improdutivo": 44.6,
+        "horas_recuperaveis": 10038.82,
+        "posicoes_equivalentes": 1.94
+      },
+      {
+        "porto_atracacao": "Terminal de Petróleo TPET/TOIL - Açu",
+        "complexo_portuario": "São João da Barra",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 384,
+        "improdutivo_h": 9484.1,
+        "improdutivo_mediano_h": 12.55,
+        "pct_improdutivo": 45.07,
+        "horas_recuperaveis": 5648.62,
+        "posicoes_equivalentes": 1.08
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário de Angra dos Reis",
+        "complexo_portuario": "Angra dos Reis",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 486,
+        "improdutivo_h": 8159.77,
+        "improdutivo_mediano_h": 9.64,
+        "pct_improdutivo": 35.87,
+        "horas_recuperaveis": 4013.42,
+        "posicoes_equivalentes": 0.93
+      },
+      {
+        "porto_atracacao": "Suape",
+        "complexo_portuario": "Suape - Recife",
+        "sguf": "PE",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 1572,
+        "improdutivo_h": 13842.92,
+        "improdutivo_mediano_h": 7.42,
+        "pct_improdutivo": 24.39,
+        "horas_recuperaveis": 3501.02,
+        "posicoes_equivalentes": 1.58
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário de São Sebastião (Almirante Barroso)",
+        "complexo_portuario": "São Sebastião",
+        "sguf": "SP",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 711,
+        "improdutivo_h": 7361.22,
+        "improdutivo_mediano_h": 8.13,
+        "pct_improdutivo": 28.05,
+        "horas_recuperaveis": 2577.86,
+        "posicoes_equivalentes": 0.84
+      },
+      {
+        "porto_atracacao": "Portocel - Terminal Especializado de Barra do Riacho",
+        "complexo_portuario": "Barra do Riacho",
+        "sguf": "ES",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 407,
+        "improdutivo_h": 6226.18,
+        "improdutivo_mediano_h": 8.5,
+        "pct_improdutivo": 24.91,
+        "horas_recuperaveis": 1671.42,
+        "posicoes_equivalentes": 0.71
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário da Ilha D'Água",
+        "complexo_portuario": "Rio de Janeiro -  Niterói",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 367,
+        "improdutivo_h": 5011.95,
+        "improdutivo_mediano_h": 9.92,
+        "pct_improdutivo": 26.59,
+        "horas_recuperaveis": 1577.3,
+        "posicoes_equivalentes": 0.57
+      },
+      {
+        "porto_atracacao": "Porto Itapoá Terminais Portuários",
+        "complexo_portuario": "São Francisco do Sul",
+        "sguf": "SC",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 692,
+        "improdutivo_h": 4283.0,
+        "improdutivo_mediano_h": 5.2,
+        "pct_improdutivo": 27.57,
+        "horas_recuperaveis": 1451.35,
+        "posicoes_equivalentes": 0.49
+      },
+      {
+        "porto_atracacao": "Porto do Açu - Terminal de Minério",
+        "complexo_portuario": "São João da Barra",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 141,
+        "improdutivo_h": 2379.33,
+        "improdutivo_mediano_h": 11.95,
+        "pct_improdutivo": 36.62,
+        "horas_recuperaveis": 1195.26,
+        "posicoes_equivalentes": 0.27
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário de Madre de Deus",
+        "complexo_portuario": "Aratu - Salvador",
+        "sguf": "BA",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 380,
+        "improdutivo_h": 4314.17,
+        "improdutivo_mediano_h": 9.16,
+        "pct_improdutivo": 25.17,
+        "horas_recuperaveis": 1190.82,
+        "posicoes_equivalentes": 0.49
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário de Ilha Redonda e Terminal Aquaviário da Ilha Comprida",
+        "complexo_portuario": "Rio de Janeiro -  Niterói",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 64,
+        "improdutivo_h": 1711.2,
+        "improdutivo_mediano_h": 13.45,
+        "pct_improdutivo": 55.81,
+        "horas_recuperaveis": 1152.42,
+        "posicoes_equivalentes": 0.2
+      },
+      {
+        "porto_atracacao": "Belém",
+        "complexo_portuario": "Vila do Conde - Belém",
+        "sguf": "PA",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 257,
+        "improdutivo_h": 3346.03,
+        "improdutivo_mediano_h": 11.73,
+        "pct_improdutivo": 27.7,
+        "horas_recuperaveis": 1144.89,
+        "posicoes_equivalentes": 0.38
+      },
+      {
+        "porto_atracacao": "Terminal de Uso Privado de Macau",
+        "complexo_portuario": "Areia Branca",
+        "sguf": "RN",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 384,
+        "improdutivo_h": 1714.38,
+        "improdutivo_mediano_h": 4.0,
+        "pct_improdutivo": 46.93,
+        "horas_recuperaveis": 1048.65,
+        "posicoes_equivalentes": 0.2
+      },
+      {
+        "porto_atracacao": "Fortaleza",
+        "complexo_portuario": "Pecém - Fortaleza",
+        "sguf": "CE",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 373,
+        "improdutivo_h": 5486.58,
+        "improdutivo_mediano_h": 9.87,
+        "pct_improdutivo": 22.06,
+        "horas_recuperaveis": 953.94,
+        "posicoes_equivalentes": 0.63
+      },
+      {
+        "porto_atracacao": "Terminal Aquaviário de Manaus",
+        "complexo_portuario": "Manaus",
+        "sguf": "AM",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 107,
+        "improdutivo_h": 1843.62,
+        "improdutivo_mediano_h": 10.58,
+        "pct_improdutivo": 35.36,
+        "horas_recuperaveis": 893.38,
+        "posicoes_equivalentes": 0.21
+      }
+    ]
+  },
+  "c_custo_do_vies": {
+    "top10_ingenuo": [
+      "BRRJ053",
+      "BRPA248",
+      "BRRO022",
+      "BRVDC",
+      "BRNTR",
+      "BRAM008",
+      "BRSP011",
+      "BRAM014",
+      "BRSSZ",
+      "BRMCP"
+    ],
+    "top10_corrigido": [
+      "BRRJ067",
+      "BRSUA",
+      "BRSC011",
+      "BRBA003",
+      "BRAM014",
+      "BRES006",
+      "BRRJ010",
+      "BRRJ009",
+      "BRSP006",
+      "BRRJ020"
+    ],
+    "instalacoes_em_comum": 1,
+    "leitura": "Das dez instalacoes que o ranking nao segmentado apontaria para intervencao, apenas as que aparecem em ambos os conjuntos resistem ao controle por modo de navegacao."
+  },
+  "d_congestionamento_maritimo": {
+    "instalacoes": 76,
+    "spearman_rho": 0.3956,
+    "p_valor": 0.000405171,
+    "variancia_de_ordem_explicada_pct": 15.6,
+    "ocupacao_mediana_pct": 21.44,
+    "espera_mediana_h": 17.93
+  },
+  "e_multiplicidade_berco": {
+    "bercos_avaliados": 624,
+    "bercos_exclusivos": 219,
+    "pct_exclusivos": 35.1,
+    "mediana_posicoes": 2,
+    "p90_posicoes": 5,
+    "max_posicoes": 125,
+    "implicacao": "IDBerco nao e uma posicao de atracacao exclusiva. Taxas de ocupacao calculadas com um berco = uma posicao superestimariam a utilizacao e levariam a diagnostico falso de congestionamento."
+  }
+}

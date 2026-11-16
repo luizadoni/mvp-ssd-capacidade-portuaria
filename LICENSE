@@ -1,0 +1,46 @@
+MIT License
+
+Copyright (c) 2026 Luíza Doniak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------------------------------------------
+LICENÇA DOS DADOS (distinta da licença do código acima)
+
+Os dados utilizados neste trabalho são do Estatístico Aquaviário da Agência
+Nacional de Transportes Aquaviários (ANTAQ), coletados pelo Sistema de
+Desempenho Portuário (SDP) e publicados como dado público aberto.
+
+A ANTAQ disponibiliza a base para uso livre, inclusive acadêmico e comercial,
+com exigência de citação da fonte.
+
+Os arquivos brutos NÃO são versionados neste repositório. O script
+scripts/coleta.py reproduz a obtenção a partir da fonte oficial e registra
+origem, data, volume e hash SHA256 de cada arquivo em um manifesto, de modo
+que a coleta seja auditável sem redistribuir o dado.
+
+A base não contém dados pessoais na acepção da Lei 13.709/2018 (LGPD): a
+unidade de registro é a atracação de uma embarcação em uma instalação
+portuária, não uma pessoa natural. Não foi necessária nenhuma etapa de
+anonimização.
+
+Citação sugerida:
+AGÊNCIA NACIONAL DE TRANSPORTES AQUAVIÁRIOS (ANTAQ). Estatístico Aquaviário:
+base de dados 2025. Brasília: ANTAQ, 2026. Disponível em:
+https://www.gov.br/antaq/pt-br/assuntos/estatistica. Acesso em: 16 nov. 2026.

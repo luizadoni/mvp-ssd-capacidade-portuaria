@@ -1,0 +1,470 @@
+{
+  "ano": 2025,
+  "atracacoes_analisadas": 115071,
+  "p1_decomposicao": {
+    "atracacoes_com_cadeia_completa": 108506,
+    "navio_hora_total": 6575336.2,
+    "horas_por_etapa": {
+      "t1_espera_atracacao": 3585366.7,
+      "t2_espera_inicio_op": 412872.1,
+      "t3_operacao": 2196791.8,
+      "t4_espera_desatracacao": 380305.6
+    },
+    "participacao_pct": {
+      "t1_espera_atracacao": 54.53,
+      "t2_espera_inicio_op": 6.28,
+      "t3_operacao": 33.41,
+      "t4_espera_desatracacao": 5.78
+    },
+    "mediana_h": {
+      "t1": 1.0,
+      "t2": 0.37,
+      "t3": 7.0,
+      "t4": 0.92,
+      "estadia": 21.35
+    },
+    "media_h": {
+      "t1": 33.04,
+      "t2": 3.81,
+      "t3": 20.25,
+      "t4": 3.5,
+      "estadia": 60.6
+    },
+    "desvio_padrao_h": {
+      "t1": 78.0,
+      "t3": 41.01,
+      "estadia": 99.06
+    },
+    "berco_improdutivo_total_h": 793177.7,
+    "berco_improdutivo_pct_do_tempo_atracado": 26.53
+  },
+  "p2_concentracao": {
+    "improdutivo_total_h": 793177.7,
+    "equivalente_em_posicoes_de_berco": 90.5,
+    "instalacoes_avaliadas": 206,
+    "pct_do_improdutivo_no_top10": 45.16,
+    "pct_do_improdutivo_no_top20": 61.56,
+    "top20": [
+      {
+        "sk_instalacao": "BRPA248",
+        "porto_atracacao": "Cargill Agrícola S.A. (ETC Miritituba/PA)",
+        "complexo_portuario": "Itaituba",
+        "sguf": "PA",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 1084,
+        "improdutivo_h": 145397.6,
+        "improdutivo_medio_h": 134.13,
+        "pct_improdutivo": 96.93,
+        "posicoes_berco_equivalentes": 16.6
+      },
+      {
+        "sk_instalacao": "BRSSZ",
+        "porto_atracacao": "Santos",
+        "complexo_portuario": "Santos",
+        "sguf": "SP",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 5043,
+        "improdutivo_h": 41313.42,
+        "improdutivo_medio_h": 8.19,
+        "pct_improdutivo": 15.58,
+        "posicoes_berco_equivalentes": 4.72
+      },
+      {
+        "sk_instalacao": "BRSP011",
+        "porto_atracacao": "LDC Pederneiras",
+        "complexo_portuario": "LDC Pederneiras (Instalação Isolada)",
+        "sguf": "SP",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 852,
+        "improdutivo_h": 27635.25,
+        "improdutivo_medio_h": 32.44,
+        "pct_improdutivo": 84.88,
+        "posicoes_berco_equivalentes": 3.15
+      },
+      {
+        "sk_instalacao": "BRRO022",
+        "porto_atracacao": "F. H. de Oliveira Peixoto",
+        "complexo_portuario": "Porto Velho",
+        "sguf": "RO",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 93,
+        "improdutivo_h": 27519.87,
+        "improdutivo_medio_h": 295.91,
+        "pct_improdutivo": 85.35,
+        "posicoes_berco_equivalentes": 3.14
+      },
+      {
+        "sk_instalacao": "BRMCP",
+        "porto_atracacao": "Santana",
+        "complexo_portuario": "Macapá",
+        "sguf": "AP",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 560,
+        "improdutivo_h": 23029.73,
+        "improdutivo_medio_h": 41.12,
+        "pct_improdutivo": 61.9,
+        "posicoes_berco_equivalentes": 2.63
+      },
+      {
+        "sk_instalacao": "BRNTR",
+        "porto_atracacao": "Niterói",
+        "complexo_portuario": "Rio de Janeiro -  Niterói",
+        "sguf": "RJ",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 547,
+        "improdutivo_h": 21908.87,
+        "improdutivo_medio_h": 40.05,
+        "pct_improdutivo": 98.13,
+        "posicoes_berco_equivalentes": 2.5
+      },
+      {
+        "sk_instalacao": "BRRJ053",
+        "porto_atracacao": "Brasil Logística Offshore e Estaleiro Naval",
+        "complexo_portuario": "São João da Barra",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 9855,
+        "improdutivo_h": 18201.35,
+        "improdutivo_medio_h": 1.85,
+        "pct_improdutivo": 13.99,
+        "posicoes_berco_equivalentes": 2.08
+      },
+      {
+        "sk_instalacao": "BRVDC",
+        "porto_atracacao": "Vila do Conde",
+        "complexo_portuario": "Vila do Conde - Belém",
+        "sguf": "PA",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 2113,
+        "improdutivo_h": 17758.02,
+        "improdutivo_medio_h": 8.4,
+        "pct_improdutivo": 23.33,
+        "posicoes_berco_equivalentes": 2.03
+      },
+      {
+        "sk_instalacao": "BRAM008",
+        "porto_atracacao": "TUP Ibepar",
+        "complexo_portuario": "Manaus",
+        "sguf": "AM",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 315,
+        "improdutivo_h": 17738.2,
+        "improdutivo_medio_h": 56.31,
+        "pct_improdutivo": 88.23,
+        "posicoes_berco_equivalentes": 2.02
+      },
+      {
+        "sk_instalacao": "BRAM014",
+        "porto_atracacao": "Terminal Graneleiro Hermasa",
+        "complexo_portuario": "Manaus",
+        "sguf": "AM",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 3141,
+        "improdutivo_h": 17723.77,
+        "improdutivo_medio_h": 5.64,
+        "pct_improdutivo": 35.44,
+        "posicoes_berco_equivalentes": 2.02
+      },
+      {
+        "sk_instalacao": "BRSUA",
+        "porto_atracacao": "Suape",
+        "complexo_portuario": "Suape - Recife",
+        "sguf": "PE",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 1753,
+        "improdutivo_h": 15530.77,
+        "improdutivo_medio_h": 8.86,
+        "pct_improdutivo": 25.91,
+        "posicoes_berco_equivalentes": 1.77
+      },
+      {
+        "sk_instalacao": "BRRIG",
+        "porto_atracacao": "Rio Grande",
+        "complexo_portuario": "Rio Grande",
+        "sguf": "RS",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 2768,
+        "improdutivo_h": 14829.68,
+        "improdutivo_medio_h": 5.36,
+        "pct_improdutivo": 15.9,
+        "posicoes_berco_equivalentes": 1.69
+      },
+      {
+        "sk_instalacao": "BRRIO",
+        "porto_atracacao": "Rio de Janeiro",
+        "complexo_portuario": "Rio de Janeiro -  Niterói",
+        "sguf": "RJ",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 5751,
+        "improdutivo_h": 14423.27,
+        "improdutivo_medio_h": 2.51,
+        "pct_improdutivo": 13.57,
+        "posicoes_berco_equivalentes": 1.65
+      },
+      {
+        "sk_instalacao": "BRBEL",
+        "porto_atracacao": "Belém",
+        "complexo_portuario": "Vila do Conde - Belém",
+        "sguf": "PA",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 5496,
+        "improdutivo_h": 14203.12,
+        "improdutivo_medio_h": 2.58,
+        "pct_improdutivo": 17.01,
+        "posicoes_berco_equivalentes": 1.62
+      },
+      {
+        "sk_instalacao": "BRRO006",
+        "porto_atracacao": "Cargill Agrícola",
+        "complexo_portuario": "Porto Velho",
+        "sguf": "RO",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 111,
+        "improdutivo_h": 13303.12,
+        "improdutivo_medio_h": 119.85,
+        "pct_improdutivo": 90.81,
+        "posicoes_berco_equivalentes": 1.52
+      },
+      {
+        "sk_instalacao": "BRPA016",
+        "porto_atracacao": "TUP Bertolini - Belém",
+        "complexo_portuario": "Vila do Conde - Belém",
+        "sguf": "PA",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 302,
+        "improdutivo_h": 13265.53,
+        "improdutivo_medio_h": 43.93,
+        "pct_improdutivo": 83.64,
+        "posicoes_berco_equivalentes": 1.51
+      },
+      {
+        "sk_instalacao": "BRGO001",
+        "porto_atracacao": "LDC São Simão",
+        "complexo_portuario": "São Simão",
+        "sguf": "GO",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 854,
+        "improdutivo_h": 12455.32,
+        "improdutivo_medio_h": 14.58,
+        "pct_improdutivo": 81.89,
+        "posicoes_berco_equivalentes": 1.42
+      },
+      {
+        "sk_instalacao": "BRPNG",
+        "porto_atracacao": "Paranaguá",
+        "complexo_portuario": "Paranaguá - Antonina",
+        "sguf": "PR",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 2267,
+        "improdutivo_h": 12441.48,
+        "improdutivo_medio_h": 5.49,
+        "pct_improdutivo": 12.36,
+        "posicoes_berco_equivalentes": 1.42
+      },
+      {
+        "sk_instalacao": "BRVIX",
+        "porto_atracacao": "Vitória",
+        "complexo_portuario": "Vitória",
+        "sguf": "ES",
+        "tipo_autoridade": "Porto Organizado",
+        "atracacoes": 1050,
+        "improdutivo_h": 10084.67,
+        "improdutivo_medio_h": 9.6,
+        "pct_improdutivo": 16.13,
+        "posicoes_berco_equivalentes": 1.15
+      },
+      {
+        "sk_instalacao": "BRRJ067",
+        "porto_atracacao": "Terminal de Petróleo TPET/TOIL - Açu",
+        "complexo_portuario": "São João da Barra",
+        "sguf": "RJ",
+        "tipo_autoridade": "Terminal Autorizado",
+        "atracacoes": 384,
+        "improdutivo_h": 9484.1,
+        "improdutivo_medio_h": 24.7,
+        "pct_improdutivo": 45.07,
+        "posicoes_berco_equivalentes": 1.08
+      }
+    ]
+  },
+  "p3_congestionamento": {
+    "instalacoes_na_analise": 131,
+    "criterio": "instalacoes com ao menos 100 atracacoes aptas",
+    "ocupacao_mediana_pct": 19.58,
+    "ocupacao_p90_pct": 44.34,
+    "spearman_ocupacao_vs_espera": {
+      "rho": 0.53,
+      "p_valor": 7.51995e-11
+    },
+    "quartil_baixa_ocupacao": {
+      "n": 33,
+      "ocupacao_max_pct": 13.87,
+      "espera_media_h": 26.09,
+      "desvio_padrao_h": 67.98
+    },
+    "quartil_alta_ocupacao": {
+      "n": 33,
+      "ocupacao_min_pct": 31.75,
+      "espera_media_h": 75.21,
+      "desvio_padrao_h": 61.17
+    },
+    "teste_t_welch": {
+      "t": 3.0856,
+      "p_valor": 0.00301105
+    }
+  },
+  "p4_produtividade": {
+    "atracacoes_na_analise": 78618,
+    "criterio": "operacao produtiva, atracacao exclusiva, prancha plausivel",
+    "variancia_explicada_log_prancha": {
+      "por_instalacao": 0.5981,
+      "por_natureza_da_carga": 0.1886,
+      "por_tipo_de_navegacao": 0.054
+    },
+    "prancha_por_natureza_th": [
+      {
+        "natureza_carga": "Carga Conteinerizada",
+        "n": 9242,
+        "mediana": 951.49,
+        "media": 1026.37,
+        "desvio": 630.71,
+        "p10": 310.93,
+        "p90": 1830.12
+      },
+      {
+        "natureza_carga": "Carga Geral",
+        "n": 12574,
+        "mediana": 219.48,
+        "media": 338.63,
+        "desvio": 1123.75,
+        "p10": 21.22,
+        "p90": 505.9
+      },
+      {
+        "natureza_carga": "Granel Líquido e Gasoso",
+        "n": 15188,
+        "mediana": 277.82,
+        "media": 908.96,
+        "desvio": 1687.79,
+        "p10": 59.74,
+        "p90": 2980.79
+      },
+      {
+        "natureza_carga": "Granel Sólido",
+        "n": 41614,
+        "mediana": 796.2,
+        "media": 1036.61,
+        "desvio": 1267.77,
+        "p10": 178.61,
+        "p90": 1667.74
+      }
+    ],
+    "dispersao_entre_instalacoes_dentro_da_carga": [
+      {
+        "natureza_carga": "Carga Conteinerizada",
+        "instalacoes": 22,
+        "mediana_p10": 244.29,
+        "mediana_p90": 1267.02,
+        "razao_p90_p10": 5.19
+      },
+      {
+        "natureza_carga": "Carga Geral",
+        "instalacoes": 40,
+        "mediana_p10": 33.02,
+        "mediana_p90": 357.4,
+        "razao_p90_p10": 10.82
+      },
+      {
+        "natureza_carga": "Granel Líquido e Gasoso",
+        "instalacoes": 60,
+        "mediana_p10": 48.88,
+        "mediana_p90": 1022.3,
+        "razao_p90_p10": 20.91
+      },
+      {
+        "natureza_carga": "Granel Sólido",
+        "instalacoes": 78,
+        "mediana_p10": 137.31,
+        "mediana_p90": 2347.36,
+        "razao_p90_p10": 17.1
+      }
+    ]
+  },
+  "sintese_decisao": {
+    "pct_improdutivo_mediano_do_setor": 20.77,
+    "horas_recuperaveis_top10": 211358.6,
+    "posicoes_de_berco_equivalentes_recuperaveis": 24.13,
+    "detalhe": [
+      {
+        "porto_atracacao": "Cargill Agrícola S.A. (ETC Miritituba/PA)",
+        "complexo_portuario": "Itaituba",
+        "atracacoes": 1084,
+        "pct_improdutivo": 96.93,
+        "horas_recuperaveis": 114241.95
+      },
+      {
+        "porto_atracacao": "Santos",
+        "complexo_portuario": "Santos",
+        "atracacoes": 5043,
+        "pct_improdutivo": 15.58,
+        "horas_recuperaveis": 0.0
+      },
+      {
+        "porto_atracacao": "LDC Pederneiras",
+        "complexo_portuario": "LDC Pederneiras (Instalação Isolada)",
+        "atracacoes": 852,
+        "pct_improdutivo": 84.88,
+        "horas_recuperaveis": 20872.9
+      },
+      {
+        "porto_atracacao": "F. H. de Oliveira Peixoto",
+        "complexo_portuario": "Porto Velho",
+        "atracacoes": 93,
+        "pct_improdutivo": 85.35,
+        "horas_recuperaveis": 20823.0
+      },
+      {
+        "porto_atracacao": "Santana",
+        "complexo_portuario": "Macapá",
+        "atracacoes": 560,
+        "pct_improdutivo": 61.9,
+        "horas_recuperaveis": 15301.85
+      },
+      {
+        "porto_atracacao": "Niterói",
+        "complexo_portuario": "Rio de Janeiro -  Niterói",
+        "atracacoes": 547,
+        "pct_improdutivo": 98.13,
+        "horas_recuperaveis": 17271.7
+      },
+      {
+        "porto_atracacao": "Brasil Logística Offshore e Estaleiro Naval",
+        "complexo_portuario": "São João da Barra",
+        "atracacoes": 9855,
+        "pct_improdutivo": 13.99,
+        "horas_recuperaveis": 0.0
+      },
+      {
+        "porto_atracacao": "Vila do Conde",
+        "complexo_portuario": "Vila do Conde - Belém",
+        "atracacoes": 2113,
+        "pct_improdutivo": 23.33,
+        "horas_recuperaveis": 1947.16
+      },
+      {
+        "porto_atracacao": "TUP Ibepar",
+        "complexo_portuario": "Manaus",
+        "atracacoes": 315,
+        "pct_improdutivo": 88.23,
+        "horas_recuperaveis": 13562.71
+      },
+      {
+        "porto_atracacao": "Terminal Graneleiro Hermasa",
+        "complexo_portuario": "Manaus",
+        "atracacoes": 3141,
+        "pct_improdutivo": 35.44,
+        "horas_recuperaveis": 7337.33
+      }
+    ]
+  }
+}

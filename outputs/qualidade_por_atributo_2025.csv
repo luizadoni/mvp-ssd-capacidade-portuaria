@@ -1,0 +1,60 @@
+tabela,atributo,papel,tipo,preenchidos,nulos,completude_pct,valores_distintos,dominio_observado,regra_de_dominio,violacoes_de_dominio,situacao
+fato_atracacao,sk_atracacao,chave primária,str,116327,0,100.0,116327,"116,327 categorias distintas",sem domínio declarado,0,conforme
+fato_atracacao,sk_instalacao,chave estrangeira,str,116327,0,100.0,212,212 categorias distintas,sem domínio declarado,0,conforme
+fato_atracacao,sk_berco,chave estrangeira,str,116321,6,99.99,625,625 categorias distintas,sem domínio declarado,0,conforme com ausências
+fato_atracacao,sk_data,chave estrangeira,datetime64[ms],116327,0,100.0,365,2025-01-01 a 2025-12-31,sem domínio declarado,0,conforme
+fato_atracacao,sk_navegacao,chave estrangeira,float64,116321,6,99.99,35,min 1.00 | p50 12.00 | max 35.00,sem domínio declarado,0,conforme com ausências
+fato_atracacao,sk_natureza,chave estrangeira,int64,116327,0,100.0,5,min 1.00 | p50 4.00 | max 5.00,sem domínio declarado,0,conforme
+fato_atracacao,nacionalidade_armador,atributo descritivo,str,116321,6,99.99,3,0; 1; 2,esperado em: 0; 1; 2,0,conforme com ausências
+fato_atracacao,numero_imo,atributo descritivo,str,59892,56435,51.49,7532,"7,532 categorias distintas",sem domínio declarado,0,conforme com ausências
+fato_atracacao,t1_espera_atracacao_h,medida,float64,116321,6,99.99,13868,"min 0.00 | p50 1.00 | max 175,404.40","esperado entre 0 e 8,760",144,violação de domínio
+fato_atracacao,t2_espera_inicio_op_h,medida,float64,109633,6694,94.25,3128,"min 0.00 | p50 0.38 | max 175,320.50","esperado entre 0 e 8,760",3,violação de domínio
+fato_atracacao,t3_operacao_h,medida,float64,109632,6695,94.24,8134,"min 0.00 | p50 7.08 | max 87,730.20","esperado entre 0 e 8,760",1,violação de domínio
+fato_atracacao,t4_espera_desatracacao_h,medida,float64,109635,6692,94.25,2826,"min 0.00 | p50 0.92 | max 7,297.00","esperado entre 0 e 8,760",0,conforme com ausências
+fato_atracacao,ta_atracado_h,medida,float64,116321,6,99.99,9552,"min 0.02 | p50 11.13 | max 175,324.00","esperado entre 0 e 8,760",8,violação de domínio
+fato_atracacao,te_estadia_h,medida,float64,116321,6,99.99,17558,"min 0.03 | p50 20.57 | max 175,474.43","esperado entre 0 e 8,760",153,violação de domínio
+fato_atracacao,berco_improdutivo_h,medida,float64,109632,6695,94.24,5786,"min 0.00 | p50 1.77 | max 175,321.00","esperado entre 0 e 8,760",3,violação de domínio
+fato_atracacao,peso_bruto_t,medida,float64,116327,0,100.0,72340,"min 0.00 | p50 1,806.89 | max 419,507.66","esperado entre 0 e 1,000,000",0,conforme
+fato_atracacao,teu,medida,float64,116327,0,100.0,3731,"min 0.00 | p50 0.00 | max 14,145.00","esperado entre 0 e 30,000",0,conforme
+fato_atracacao,qtd_itens_carga,medida,int64,116327,0,100.0,1198,"min 0.00 | p50 1.00 | max 7,292.00","esperado entre 0 e 50,000",0,conforme
+fato_atracacao,prancha_operacional_th,medida,float64,94181,22146,80.96,91160,"min 0.00 | p50 416.86 | max 2,705,674.00","esperado entre 0 e 20,000",73,violação de domínio
+fato_atracacao,prancha_geral_th,medida,float64,94182,22145,80.96,91165,"min 0.00 | p50 265.86 | max 100,022.91","esperado entre 0 e 20,000",5,violação de domínio
+fato_atracacao,flag_cronologia_invalida,marcação de qualidade,bool,116327,0,100.0,1,"verdadeiro em 0 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_operacao_ausente,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 6,695 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_estadia_outlier,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 1,250 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_sem_carga_declarada,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 22,145 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_atracacao_exclusiva,marcação de qualidade,object,94182,22145,80.96,2,False; True,sem domínio declarado,0,conforme com ausências
+fato_atracacao,flag_prancha_implausivel,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 73 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_fora_bbox,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 6 de 116,327",sem domínio declarado,0,conforme
+fato_atracacao,flag_apto_analise_tempo,marcação de qualidade,bool,116327,0,100.0,2,"verdadeiro em 115,071 de 116,327",sem domínio declarado,0,conforme
+dim_instalacao,sk_instalacao,chave primária,str,212,0,100.0,212,212 categorias distintas,sem domínio declarado,0,conforme
+dim_instalacao,porto_atracacao,atributo descritivo,str,211,1,99.53,211,211 categorias distintas,sem domínio declarado,0,conforme com ausências
+dim_instalacao,complexo_portuario,atributo descritivo,str,212,0,100.0,42,42 categorias distintas,sem domínio declarado,0,conforme
+dim_instalacao,apelido_instalacao,atributo descritivo,str,68,144,32.08,68,68 categorias distintas,sem domínio declarado,0,conforme com ausências
+dim_instalacao,tipo_autoridade,atributo descritivo,str,212,0,100.0,2,Porto Organizado; Terminal Autorizado,esperado em: Porto Organizado; Terminal Autorizado,0,conforme
+dim_instalacao,municipio,atributo descritivo,str,211,1,99.53,78,78 categorias distintas,sem domínio declarado,0,conforme com ausências
+dim_instalacao,uf,atributo descritivo,str,211,1,99.53,20,20 categorias distintas,sem domínio declarado,0,conforme com ausências
+dim_instalacao,sguf,atributo descritivo,str,211,1,99.53,20,20 categorias distintas,esperado em: 27 categorias válidas,0,conforme com ausências
+dim_instalacao,regiao_geografica,atributo descritivo,str,211,1,99.53,5,Centro-Oeste; Nordeste; Norte; Sudeste; Sul,esperado em: Norte; Nordeste; Sudeste; Sul; Centro-Oeste,0,conforme com ausências
+dim_instalacao,regiao_hidrografica,atributo descritivo,str,101,111,47.64,5,  Paraguai;   Paraná;   Tocantins-Araguaia;  Amazônica;  Atlântico Sul,sem domínio declarado,0,conforme com ausências
+dim_instalacao,instalacao_em_rio,atributo descritivo,str,212,0,100.0,2,Não; Sim,esperado em: Sim; Não,0,conforme
+dim_instalacao,latitude,atributo descritivo,float64,211,1,99.53,204,min -32.10 | p50 -12.81 | max -0.06,esperado entre -35.0 e 6.0,0,conforme com ausências
+dim_instalacao,longitude,atributo descritivo,float64,211,1,99.53,206,min -63.92 | p50 -48.65 | max -34.84,esperado entre -75.0 e -28.0,0,conforme com ausências
+dim_berco,sk_berco,chave primária,str,625,0,100.0,625,625 categorias distintas,sem domínio declarado,0,conforme
+dim_berco,berco,atributo descritivo,str,625,0,100.0,501,501 categorias distintas,sem domínio declarado,0,conforme
+dim_berco,sk_instalacao,chave estrangeira,str,625,0,100.0,211,211 categorias distintas,sem domínio declarado,0,conforme
+dim_tempo,sk_data,chave primária,datetime64[ms],365,0,100.0,365,2025-01-01 a 2025-12-31,sem domínio declarado,0,conforme
+dim_tempo,ano,atributo descritivo,int32,365,0,100.0,1,"min 2,025.00 | p50 2,025.00 | max 2,025.00","esperado entre 2,025 e 2,025",0,conforme
+dim_tempo,mes,atributo descritivo,int32,365,0,100.0,12,min 1.00 | p50 7.00 | max 12.00,esperado entre 1 e 12,0,conforme
+dim_tempo,nome_mes,atributo descritivo,str,365,0,100.0,12,12 categorias distintas,sem domínio declarado,0,conforme
+dim_tempo,trimestre,atributo descritivo,int32,365,0,100.0,4,min 1.00 | p50 3.00 | max 4.00,esperado entre 1 e 4,0,conforme
+dim_tempo,semestre,atributo descritivo,int64,365,0,100.0,2,min 1.00 | p50 2.00 | max 2.00,esperado entre 1 e 2,0,conforme
+dim_tempo,dia_semana,atributo descritivo,int32,365,0,100.0,7,min 0.00 | p50 3.00 | max 6.00,esperado entre 0 e 6,0,conforme
+dim_tempo,fim_de_semana,atributo descritivo,bool,365,0,100.0,2,verdadeiro em 104 de 365,sem domínio declarado,0,conforme
+dim_navegacao,sk_navegacao,chave primária,int64,35,0,100.0,35,min 1.00 | p50 18.00 | max 35.00,sem domínio declarado,0,conforme
+dim_navegacao,tipo_navegacao,atributo descritivo,str,35,0,100.0,5,Apoio Marítimo; Apoio Portuário; Cabotagem; Interior; Longo Curso,esperado em: Interior; Longo Curso; Cabotagem; Apoio Marítimo; Apoio Portuário,0,conforme
+dim_navegacao,tipo_operacao,atributo descritivo,str,35,0,100.0,8,8 categorias distintas,esperado em: Movimentação da Carga; Apoio; Passageiro; Abastecimento; Reparo/Manutenção; Misto; Marinha; Retirada de Resíduos,0,conforme
+dim_navegacao,operacao_produtiva,atributo descritivo,bool,35,0,100.0,2,verdadeiro em 6 de 35,sem domínio declarado,0,conforme
+dim_natureza_carga,sk_natureza,chave primária,int64,5,0,100.0,5,min 1.00 | p50 3.00 | max 5.00,sem domínio declarado,0,conforme
+dim_natureza_carga,natureza_carga,atributo descritivo,str,5,0,100.0,5,Carga Conteinerizada; Carga Geral; Granel Líquido e Gasoso; Granel Sólido; Sem carga declarada,esperado em: Carga Conteinerizada; Carga Geral; Granel Sólido; Granel Líquido e Gasoso; Sem carga declarada,0,conforme
+dim_natureza_carga,granel,atributo descritivo,bool,5,0,100.0,2,verdadeiro em 2 de 5,sem domínio declarado,0,conforme

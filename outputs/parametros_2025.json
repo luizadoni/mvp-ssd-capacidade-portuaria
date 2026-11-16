@@ -1,0 +1,15 @@
+{
+  "estadia_max_horas": 720,
+  "operacao_min_horas": 0.0,
+  "tipos_operacao_produtiva": [
+    "Movimentação da Carga",
+    "Misto"
+  ],
+  "prancha_max_th": 20000.0,
+  "bbox_brasil": {
+    "lat_min": -35.0,
+    "lat_max": 6.0,
+    "lon_min": -75.0,
+    "lon_max": -28.0
+  }
+}
